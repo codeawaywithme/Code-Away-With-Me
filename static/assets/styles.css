@@ -155,7 +155,6 @@ h1, h2 {
   .cta__content {
     margin: 0 auto;
     width: 80%;
-    text-align: center;
   }
 
   .cta p{
@@ -164,7 +163,7 @@ h1, h2 {
 
 
   .content {
-    text-align: center;
+    text-align: left;
   }
 
   .cta__email {
@@ -246,6 +245,10 @@ h1, h2 {
 
     .col + .col {
         margin-left: 1em;
+    }
+
+    .content {
+    text-align: center;
     }
 }
 

@@ -18,8 +18,6 @@ import smtplib
 # Create App
 app = Flask(__name__)
 app.config.from_pyfile('config.py')
-ckeditor = CKEditor(app)
-Bootstrap(app)
 
 basedir = path.abspath(path.dirname(__file__))
 load_dotenv(path.join(basedir, '.env'))
