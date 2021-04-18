@@ -1,0 +1,62 @@
+{% include 'pages/header.html' %}
+
+    <div class="cta">
+        <div class="container row">
+            {% if signed_up %}
+            <h2>Thank you for signing up!</h2>
+            <p>Tips and some great jokes are heading your way 😉!</p>
+            {% else %}
+            <div class="cta__form col">
+        <h2>Sign up for my newsletter!</h2>
+        <form name="sign_up" action="{{ url_for('get_home') }}" method="post">
+            <input class="cta__email" type="email" placeholder="Email Address" name="email">
+            <a href="{{ url_for('get_construction') }}"><button class="button" type="submit">Sign Up ➜</button></a>
+        </form>
+                </div>
+            <div class="cta__info col">
+        <p>Join my subscription list to get free monthly web design, development, and coding tips. There might also be some silly jokes, random facts, and updates on my current shenanigans. Also be notified when there is new blog content available!</p>
+            {% endif %}
+                </div>
+    </div>
+        </div>
+    <div class="container about">
+      <div class="content about__content">
+        <h2>Who Am I?</h2>
+        <p>I'm a momma of 2 beautiful, sweet girls. I'm a runner, a rock climber, a military spouse. I love programming and web development. I was inspired to contribute to the web dev community when I first heard about <a href="https://www.freecodecamp.org/">Free Code Camp </a>. Here's my story, where I've been, who I am, and where I'm going.</p>
+        <a href="{{ url_for('get_construction') }}"><button class="button">About Me ➜</button></a>
+    </div>
+  </div>
+<hr>
+    <div class="blog container">
+        <div class="content blog__content">
+        <h2>The Story</h2>
+        <p>I started Code Away With Me to be a site where I could solidify my own understanding of different web design, development, and coding concepts. From it grew this blog where I teach others what I know, what I'm learning, and how I'm making myself more techy every day.</p>
+        <a href="{{ url_for('get_construction') }}"><button class="button">Check out the blog ➜</button></a>
+    </div>
+    </div>
+    <hr>
+    <div class="container codepedia">
+        <div class="content codepedia__content">
+        <h2>Codepedia!</h2>
+        <p>While learning different languages and topics, I created a codepedia to help document terms, procedures, and other topics organized by language or framework. Check it out!</p>
+        <a href="{{ url_for('get_construction') }}"><button class="button">Check out the pedia ➜</button></a>
+    </div>
+    </div>
+    <hr>
+    <div class="container hiring">
+      <div class="content hiring__content">
+        <h2>Want to hire me?</h2>
+        <p>In addition to my blog I do some freelance work as well. Check out my portfolio for an idea of what I can do for you!</p>
+        <a href="{{ url_for('get_construction') }}"><button class="button">Portfolio ➜</button></a>
+    </div>
+  </div>
+    <hr>
+    <div class="container learn">
+      <div class="content learn__content">
+        <h2>More to Learn</h2>
+        <p>One of my favorite things about tech is all of the free resources from people (like me!) who just want to help make the tech world a better, more accessible place.</p>
+        <a href="{{ url_for('get_construction') }}"><button class="button">Resources ➜</button></a>
+    </div>
+  </div>
+    <hr>
+{% include 'pages/footer.html' %}
